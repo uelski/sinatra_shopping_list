@@ -1,0 +1,49 @@
+<h3>Item List</h3>
+
+<% if @message %>
+  <strong><%= @message %></strong>
+<% end %>
+
+<li><a href='/create'>Create New Item</a></li>
+
+<table>
+  <thead>
+    <th>
+      Id
+    </th>
+    <th>
+      Name
+    </th>
+    <th>
+      Quantity
+    </th>
+    <th>
+      Update?
+    </th>
+    <th>
+      Remove?
+    </th>
+  </thead>
+
+  <tbody>
+    <% @items.each do |item| %>
+      <tr>
+        <td>
+          <%= item.id %>
+        </td>
+        <td>
+          <%= item.name %>
+        </td>
+        <td>
+          <%= item.quantity %>
+        </td>
+        <td>
+          <a href='/update/<%= item.id %>'>Update</a>
+        </td>
+        <td>
+          <a href='/destroy/<%= item.id %>'>Remove</a>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
