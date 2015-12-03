@@ -38,8 +38,9 @@ post '/update' do
 end
 get '/destroy/:id' do
   @item = Item.find(params[:id])
-  @item.id = params[:id]
-  @item.name = params[:name]
+  # @item.id = params[:id]
+  # @item.name = params[:name]
+  #this works now?!
 
   erb :destroy
 end
