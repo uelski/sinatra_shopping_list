@@ -3,5 +3,6 @@ require 'sinatra/base'
 require('./controllers/application')
 require('./controllers/item')
 require('./models/make_item')
+require('./models/account')
 
-map('/') { run TaskController }
+map('/') { run ItemController }
