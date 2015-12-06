@@ -1,6 +1,6 @@
 class ItemController < ApplicationController
 
-get '/items' do
+get '/' do
   @items = Item.all
 
   erb :read

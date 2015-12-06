@@ -4,7 +4,7 @@
   <strong><%= @message %></strong>
 <% end %>
 
-<li><a href='/create'>Create New Item</a></li>
+<li><a href='item/create'>Create New Item</a></li>
 
 <table>
   <thead>
@@ -38,10 +38,10 @@
           <%= item.quantity %>
         </td>
         <td>
-          <a href='/update/<%= item.id %>'>Update</a>
+          <a href='item/update/<%= item.id %>'>Update</a>
         </td>
         <td>
-          <a href='/destroy/<%= item.id %>'>Remove</a>
+          <a href='item/destroy/<%= item.id %>'>Remove</a>
         </td>
       </tr>
     <% end %>
