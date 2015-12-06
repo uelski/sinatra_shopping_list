@@ -10,7 +10,7 @@ get '/create' do
   erb :create
 end
 post '/create' do
-
+  "hello"
   @item = Item.new
   @item.name = params[:name]
   @item.quantity = params[:quantity]

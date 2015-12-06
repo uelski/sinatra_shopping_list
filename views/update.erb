@@ -4,7 +4,7 @@
   <em>Update item #<%= @item.id %>.</em>
 </p>
 
-<form action="/update" method="post">
+<form action="/item/update" method="post">
   <input type="hidden" name="id" value="<%= @item.id %>">
   <input type="text" name="name" value="<%= @item.name %>">
   <input type="integer" name="quantity" value="<%= @item.quantity %>">
