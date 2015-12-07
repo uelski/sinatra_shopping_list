@@ -1,9 +1,15 @@
-<h1>Login</h1>
+<div class="row">
 
+<div class="col-xs-12 bg-danger">
+
+
+<h2>Login</h2>
+</div>
+</div>
 <% if @message %>
 <li><%= @message %></li>
 <% end %>
-
+<hr>
 <form class="" action="/login" method="post">
   <input type="text" name="user_name" placeholder="username">
   <input type="password" name="password" placeholder="your password">

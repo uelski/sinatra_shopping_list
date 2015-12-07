@@ -1,46 +1,59 @@
-<h3>Item List</h3>
+<div class="row">
+  <div class="col-xs-12 bg-danger">
+    <h3>Items</h3>
+  </div>
+</div>
+
+
 
 <% if @message %>
   <strong><%= @message %></strong>
 <% end %>
-
-<li><a href='item/create'>Create New Item</a></li>
+<hr>
+<div class="row">
+  <div class="col-md-12 bg-success">
+    <li><a href='item/create'>Create New Item</a></li>
+  </div>
+</div>
+<br>
 
 <table>
+  <div class="row">
   <thead>
-    <th>
-      Id
-    </th>
-    <th>
-      Name
-    </th>
-    <th>
-      Quantity
-    </th>
-    <th>
-      Update?
-    </th>
-    <th>
-      Remove?
-    </th>
-  </thead>
+      <th class="col-xs-1 bg-danger">
+        Ids
+      </th>
+      <th class="col-xs-3 bg-info">
+        Name
+      </th>
+      <th class="col-xs-2">
+        Quantity
+      </th>
+      <th class="col-xs-3">
+        Update?
+      </th>
+      <th class="col-xs-3">
+        Remove?
+      </th>
 
+  </thead>
+</div>
   <tbody>
     <% @items.each do |item| %>
       <tr>
-        <td>
+        <td class="col-xs-1 bg-danger">
           <%= item.id %>
         </td>
-        <td>
+        <td class="col-xs-3 bg-info">
           <%= item.name %>
         </td>
-        <td>
+        <td class="col-xs-2">
           <%= item.quantity %>
         </td>
-        <td>
+        <td class="col-xs-3">
           <a href='item/update/<%= item.id %>'>Update</a>
         </td>
-        <td>
+        <td class="col-xs-3">
           <a href='item/destroy/<%= item.id %>'>Remove</a>
         </td>
       </tr>
